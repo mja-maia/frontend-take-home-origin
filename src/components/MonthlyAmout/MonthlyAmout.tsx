@@ -1,3 +1,5 @@
+import { useRecoilValue } from 'recoil';
+import totalAmountState from 'state/totalAmountState';
 import {
   Container,
   Information,
@@ -7,6 +9,8 @@ import {
 } from './styles';
 
 export default function MonthlyAmout(): JSX.Element {
+  const totalAmount = useRecoilValue(totalAmountState);
+
   return (
     <Container>
       <MonthlySimulation>
@@ -16,7 +20,7 @@ export default function MonthlyAmout(): JSX.Element {
       <Information>
         <span>
           You’re planning <b>48 monthly deposits</b> to reach your
-          <b> $25,000</b> goal by <b>October 2020</b>.
+          <b> ${totalAmount}</b> goal by <b>October 2020</b>.
         </span>
       </Information>
     </Container>

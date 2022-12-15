@@ -1,9 +1,10 @@
 import { ReactComponent as MoneyIcon } from 'assets/icons/money-icon.svg';
-import { useState } from 'react';
+import { useRecoilState } from 'recoil';
+import totalAmountState from 'state/totalAmountState';
 import { Input, InputWrapper, Label, Container } from './styles';
 
 export default function Amount(): JSX.Element {
-  const [value, setValue] = useState('');
+  const [amount, setAmount] = useRecoilState(totalAmountState);
 
   return (
     <Container>
@@ -12,9 +13,9 @@ export default function Amount(): JSX.Element {
         <MoneyIcon />
         <Input
           type="text"
-          value={value}
+          value={amount}
           thousandSeparator
-          onChange={(e) => setValue(e.target.value)}
+          onChange={(e) => setAmount(e.target.value)}
         />
       </InputWrapper>
     </Container>
