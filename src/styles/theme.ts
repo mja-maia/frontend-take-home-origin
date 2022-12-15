@@ -6,6 +6,7 @@ const theme = {
       information: '#708797',
       label: '#1E2A3',
       placeholderIcon: '#CBD5DC',
+      subtitle: '#1E2A32',
     },
     title: {
       primary: '#1B31A8',
@@ -19,6 +20,7 @@ const theme = {
     },
   },
   sizes: {
+    banner: '32px',
     title: '24px',
     subtitle: '20px',
     description: '16px',
