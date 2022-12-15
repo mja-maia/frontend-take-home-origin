@@ -16,7 +16,7 @@ export default function MonthlyAmout(): JSX.Element {
       <Information>
         <span>
           You’re planning <b>48 monthly deposits</b> to reach your
-          <b>$25,000</b> goal by <b>October 2020</b>.
+          <b> $25,000</b> goal by <b>October 2020</b>.
         </span>
       </Information>
     </Container>

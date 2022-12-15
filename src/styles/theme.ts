@@ -7,6 +7,7 @@ const theme = {
       label: '#1E2A3',
       placeholderIcon: '#CBD5DC',
       subtitle: '#1E2A32',
+      light: '#FFF',
     },
     title: {
       primary: '#1B31A8',

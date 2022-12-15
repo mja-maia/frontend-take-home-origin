@@ -9,3 +9,8 @@ export const Container = styled.div`
   margin-top: 24px;
   background-color: ${({ theme }) => theme.colors.background.card};
 `;
+
+export const Actions = styled.div`
+  display: flex;
+  justify-content: center;
+`;
