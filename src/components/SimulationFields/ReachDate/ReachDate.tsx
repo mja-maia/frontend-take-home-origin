@@ -1,11 +1,13 @@
 import { ReactComponent as ArrowLeft } from 'assets/icons/arrow-left.svg';
 import { ReactComponent as ArrowRight } from 'assets/icons/arrow-right.svg';
 import { getMonthLongName, getYear } from 'helpers/dates';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect } from 'react';
+import { useRecoilState } from 'recoil';
+import reachDateState from 'state/reachDateState';
 import { InputWrapper, Label, Container, Month, Year, Dates } from './styles';
 
 export default function ReachDate(): JSX.Element {
-  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [selectedDate, setSelectedDate] = useRecoilState(reachDateState);
 
   const handleDate = useCallback(
     (operator: 'increase' | 'decrease') => {
@@ -16,11 +18,11 @@ export default function ReachDate(): JSX.Element {
           : nextDate.getMonth() - 1
       );
 
-      if (nextDate.setHours(0, 0, 0) >= new Date().setHours(0, 0, 0)) {
+      if (nextDate > new Date()) {
         setSelectedDate(nextDate);
       }
     },
-    [selectedDate]
+    [selectedDate, setSelectedDate]
   );
 
   useEffect(() => {
