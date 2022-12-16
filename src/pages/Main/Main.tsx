@@ -6,7 +6,7 @@ export default function Main(): JSX.Element {
   return (
     <>
       <Header />
-      <Container>
+      <Container data-testid="container">
         <CallToAction>
           Let&apos;s plan your <span>saving goal.</span>
         </CallToAction>
