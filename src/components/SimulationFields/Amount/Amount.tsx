@@ -15,7 +15,9 @@ export default function Amount(): JSX.Element {
           type="text"
           value={amount}
           thousandSeparator
-          onChange={(e) => setAmount(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setAmount(e.target.value)
+          }
         />
       </InputWrapper>
     </Container>

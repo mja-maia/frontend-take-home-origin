@@ -1,6 +1,6 @@
 import { ReactComponent as ArrowLeft } from 'assets/icons/arrow-left.svg';
 import { ReactComponent as ArrowRight } from 'assets/icons/arrow-right.svg';
-import { getMonthLongName, getYear } from 'helpers/dates';
+import { getMonthLongName, getYear } from 'helpers/dates/dates';
 import { useCallback, useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import reachDateState from 'state/reachDateState';

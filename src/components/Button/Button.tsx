@@ -1,8 +1,7 @@
-import React from 'react';
 import { Container } from './styles';
 
 type Props = {
-  children: React.ReactNode;
+  children: string;
   onChange?: () => void;
 };
 
