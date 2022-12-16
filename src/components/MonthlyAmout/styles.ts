@@ -1,3 +1,4 @@
+import mediaQueries from 'helpers/mediaQueries';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -34,4 +35,8 @@ export const Information = styled.div`
   height: 50%;
   display: flex;
   align-items: center;
+
+  @media ${mediaQueries.phone} {
+    text-align: center;
+  }
 `;

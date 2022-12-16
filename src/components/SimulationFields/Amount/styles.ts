@@ -1,10 +1,15 @@
 import styled from 'styled-components';
 import { NumericFormat } from 'react-number-format';
+import mediaQueries from 'helpers/mediaQueries';
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media ${mediaQueries.phone} {
+    margin-bottom: 16px;
+  }
 `;
 
 export const Label = styled.div`
@@ -21,6 +26,11 @@ export const InputWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media ${mediaQueries.phone} {
+    max-width: 100%;
+    justify-content: flex-start;
+  }
 `;
 
 export const Input = styled(NumericFormat)`
@@ -32,4 +42,8 @@ export const Input = styled(NumericFormat)`
   max-width: calc(100% - 24px);
   height: 100%;
   padding: 0 10px;
+
+  @media ${mediaQueries.phone} {
+    width: 100%;
+  }
 `;

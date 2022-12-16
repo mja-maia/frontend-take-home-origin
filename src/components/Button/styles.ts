@@ -1,3 +1,4 @@
+import mediaQueries from 'helpers/mediaQueries';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -14,4 +15,11 @@ export const Container = styled.div`
   margin-top: 32px;
   width: 320px;
   cursor: pointer;
+
+  @media ${mediaQueries.phone} {
+    height: 586px;
+    padding: 40px 24px;
+    width: 100%;
+    max-height: 56px;
+  }
 `;
