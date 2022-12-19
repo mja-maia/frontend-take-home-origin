@@ -13,6 +13,7 @@ export default function Amount(): JSX.Element {
         <MoneyIcon />
         <Input
           type="text"
+          name="amount"
           value={amount}
           thousandSeparator
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
