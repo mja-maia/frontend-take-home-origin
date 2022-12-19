@@ -17,8 +17,6 @@ export const Container = styled.div`
   cursor: pointer;
 
   @media ${mediaQueries.phone} {
-    height: 586px;
-    padding: 40px 24px;
     width: 100%;
     max-height: 56px;
   }

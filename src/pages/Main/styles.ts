@@ -4,7 +4,7 @@ export const Container = styled.div`
   background-color: ${(props) => props.theme.colors.background.main};
   height: calc(100vh - 80px);
   display: flex;
-  justify-content: center;
+  padding-top: 48px;
   align-items: center;
   flex-direction: column;
 `;
